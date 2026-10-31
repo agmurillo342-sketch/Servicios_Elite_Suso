@@ -104,7 +104,7 @@ quoteForm.addEventListener('submit', async (event) => {
     ? new Intl.DateTimeFormat('es-MX', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${rawDate}T12:00:00Z`))
     : 'Por definir';
   const message = [
-    'Hola, me interesa solicitar personal para un evento.',
+    'Hola, me interesa solicitar un servicio para un evento.',
     `Tipo de evento: ${data.get('eventType')}`,
     `Fecha: ${formattedDate}`,
     `Invitados aproximados: ${data.get('guests')}`,
