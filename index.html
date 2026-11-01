@@ -8,7 +8,14 @@
   <title>Servicios Elite Suso | Servicio para eventos</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="intro-active">
+  <div class="intro-screen" id="introScreen" aria-hidden="true">
+    <div class="intro-content">
+      <div class="intro-seal"><span>SES</span></div>
+      <p>Servicios Elite Suso</p>
+    </div>
+  </div>
+
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header" aria-label="Navegación principal">
@@ -25,9 +32,9 @@
   <main id="contenido">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Servicio para eventos</p>
-        <h1 id="hero-title">Atención profesional para tu <em>evento.</em></h1>
-        <a class="button button-primary" href="#servicios">
+        <p class="eyebrow hero-write hero-write-1"><span></span> Servicio para eventos</p>
+        <h1 class="hero-write hero-write-2" id="hero-title">Atención profesional para tu <em>evento.</em></h1>
+        <a class="button button-primary hero-write hero-write-3" href="#servicios">
           Ver servicios <span aria-hidden="true">↘</span>
         </a>
       </div>
@@ -35,9 +42,9 @@
     </section>
 
     <section class="services-section" id="servicios" aria-labelledby="services-title">
-      <h2 id="services-title">Servicios Elite <em>para eventos</em></h2>
+      <h2 id="services-title" data-reveal>Servicios Elite <em>para eventos</em></h2>
 
-      <div class="deck-wrap">
+      <div class="deck-wrap" data-reveal>
         <div class="card-deck" id="serviceDeck" role="region" aria-roledescription="carrusel" aria-label="Servicios disponibles" tabindex="0">
           <!-- TODO: confirmar el catálogo definitivo de servicios con el titular. -->
           <article class="service-card" data-index="0" aria-label="1 de 6: Meseros">
@@ -49,7 +56,6 @@
               <p>Atención en sala</p>
               <h3>Meseros</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
           <article class="service-card" data-index="1" aria-label="2 de 6: Capitanes">
@@ -61,7 +67,6 @@
               <p>Coordinación</p>
               <h3>Capitanes</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
           <article class="service-card" data-index="2" aria-label="3 de 6: Bartenders">
@@ -73,7 +78,6 @@
               <p>Servicio de barra</p>
               <h3>Bartenders</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
           <article class="service-card" data-index="3" aria-label="4 de 6: Montajistas">
@@ -85,7 +89,6 @@
               <p>Preparación del espacio</p>
               <h3>Montajistas</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
           <article class="service-card" data-index="4" aria-label="5 de 6: Cocineros">
@@ -97,7 +100,6 @@
               <p>Servicio de cocina</p>
               <h3>Cocineros</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
           <article class="service-card" data-index="5" aria-label="6 de 6: Atención en los baños">
@@ -107,9 +109,8 @@
             </div>
             <div class="card-content">
               <p>Servicio sanitario</p>
-              <h3>Atención en<br>los baños</h3>
+              <h3 class="long-title">Atención en<br>los baños</h3>
             </div>
-            <span class="card-corner" aria-hidden="true">SE</span>
           </article>
         </div>
 
@@ -122,12 +123,12 @@
     </section>
 
     <section class="quote-section" id="cotizar" aria-labelledby="quote-title">
-      <div class="quote-copy">
+      <div class="quote-copy" data-reveal>
         <p class="eyebrow"><span></span> Solicitud</p>
         <h2 id="quote-title">Cotiza tu <em>evento.</em></h2>
       </div>
 
-      <form class="quote-form" id="quoteForm">
+      <form class="quote-form" id="quoteForm" data-reveal>
         <label>
           <span>Tipo de evento</span>
           <input name="eventType" type="text" autocomplete="off" placeholder="Boda, cumpleaños, reunión…" required>
@@ -162,7 +163,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" data-reveal>
     <a class="brand footer-brand" href="#inicio">
       <span class="brand-mark" aria-hidden="true">S</span>
       <span>Servicios Elite <strong>Suso</strong></span>
