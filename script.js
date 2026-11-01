@@ -4,6 +4,44 @@ const previousButton = document.querySelector('#previousService');
 const nextButton = document.querySelector('#nextService');
 const progress = document.querySelector('#deckProgress');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const introScreen = document.querySelector('#introScreen');
+
+function finishIntro() {
+  document.body.classList.remove('intro-active');
+  document.body.classList.add('intro-complete');
+  introScreen?.remove();
+}
+
+if (reduceMotion.matches) {
+  finishIntro();
+} else {
+  const playIntroExit = () => {
+    window.setTimeout(() => introScreen?.classList.add('is-leaving'), 1250);
+    window.setTimeout(finishIntro, 2500);
+  };
+
+  if (document.readyState === 'complete') {
+    playIntroExit();
+  } else {
+    window.addEventListener('load', playIntroExit, { once: true });
+  }
+}
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+
+if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
 
 let activeIndex = 0;
 let pointerStart = 0;
