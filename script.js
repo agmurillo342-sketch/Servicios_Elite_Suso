@@ -33,6 +33,7 @@ function renderDeck(animate = true) {
   });
 
   progress.style.transform = `translateX(${activeIndex * 100}%)`;
+  progress.style.width = `${100 / cards.length}%`;
   deck.setAttribute('aria-label', `Servicios disponibles. Tarjeta ${activeIndex + 1} de ${cards.length}: ${cards[activeIndex].querySelector('h3').textContent}`);
 }
 
