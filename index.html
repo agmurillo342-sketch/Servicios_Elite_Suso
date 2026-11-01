@@ -40,62 +40,74 @@
       <div class="deck-wrap">
         <div class="card-deck" id="serviceDeck" role="region" aria-roledescription="carrusel" aria-label="Servicios disponibles" tabindex="0">
           <!-- TODO: confirmar el catálogo definitivo de servicios con el titular. -->
-          <article class="service-card" data-index="0" aria-label="1 de 5: Mesero">
-            <span class="card-index">01 / 05</span>
+          <article class="service-card" data-index="0" aria-label="1 de 6: Meseros">
+            <span class="card-index">01 / 06</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M13 38h38M18 38c0-9 6-17 14-17s14 8 14 17M32 21v-5M27 16h10M10 44h44"/></svg>
             </div>
             <div class="card-content">
               <p>Atención en sala</p>
-              <h3>Mesero</h3>
+              <h3>Meseros</h3>
             </div>
             <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
-          <article class="service-card" data-index="1" aria-label="2 de 5: Capitán">
-            <span class="card-index">02 / 05</span>
+          <article class="service-card" data-index="1" aria-label="2 de 6: Capitanes">
+            <span class="card-index">02 / 06</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M32 9l5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2zM20 49h24M25 55h14"/></svg>
             </div>
             <div class="card-content">
               <p>Coordinación</p>
-              <h3>Capitán</h3>
+              <h3>Capitanes</h3>
             </div>
             <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
-          <article class="service-card" data-index="2" aria-label="3 de 5: Bartender">
-            <span class="card-index">03 / 05</span>
+          <article class="service-card" data-index="2" aria-label="3 de 6: Bartenders">
+            <span class="card-index">03 / 06</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M13 13h38L35 33v15h9v5H20v-5h9V33zM20 19h24M25 26h14"/></svg>
             </div>
             <div class="card-content">
               <p>Servicio de barra</p>
-              <h3>Bartender</h3>
+              <h3>Bartenders</h3>
             </div>
             <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
-          <article class="service-card" data-index="3" aria-label="4 de 5: Montaje">
-            <span class="card-index">04 / 05</span>
+          <article class="service-card" data-index="3" aria-label="4 de 6: Montajistas">
+            <span class="card-index">04 / 06</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M10 26h44M16 26v25M48 26v25M23 26l3-13h12l3 13M26 17h12"/></svg>
             </div>
             <div class="card-content">
               <p>Preparación del espacio</p>
-              <h3>Montaje</h3>
+              <h3>Montajistas</h3>
             </div>
             <span class="card-corner" aria-hidden="true">SE</span>
           </article>
 
-          <article class="service-card" data-index="4" aria-label="5 de 5: Cocinero">
-            <span class="card-index">05 / 05</span>
+          <article class="service-card" data-index="4" aria-label="5 de 6: Cocineros">
+            <span class="card-index">05 / 06</span>
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M18 10v18M24 10v18M18 20h6M21 28v26M43 10c-6 8-6 18 0 23v21"/></svg>
             </div>
             <div class="card-content">
               <p>Servicio de cocina</p>
-              <h3>Cocinero</h3>
+              <h3>Cocineros</h3>
+            </div>
+            <span class="card-corner" aria-hidden="true">SE</span>
+          </article>
+
+          <article class="service-card" data-index="5" aria-label="6 de 6: Atención en los baños">
+            <span class="card-index">06 / 06</span>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M23 10v17M18 10v17M18 19h5M20.5 27v27M40 11c-6 8-6 18 0 23v20M35 39h10"/></svg>
+            </div>
+            <div class="card-content">
+              <p>Servicio sanitario</p>
+              <h3>Atención en<br>los baños</h3>
             </div>
             <span class="card-corner" aria-hidden="true">SE</span>
           </article>
@@ -134,11 +146,12 @@
           <span>Servicio</span>
           <select name="service" required>
             <option value="" selected disabled>Selecciona una opción</option>
-            <option>Mesero</option>
-            <option>Capitán</option>
-            <option>Bartender</option>
-            <option>Montaje</option>
-            <option>Cocinero</option>
+            <option>Meseros</option>
+            <option>Capitanes</option>
+            <option>Bartenders</option>
+            <option>Montajistas</option>
+            <option>Cocineros</option>
+            <option>Atención en los baños</option>
           </select>
         </label>
         <button class="button button-primary submit-button" type="submit">
